@@ -36,7 +36,7 @@
         <header>
           <h3 class="h6">Leave a reply</h3>
         </header>
-        <form (click)="submitComment()" class="commenting-form">
+        <form (ngSubmit)="submitComment()" class="commenting-form">
           <div class="row">
             <div class="form-group col-md-12">
               <input type="text" name="username" id="username" placeholder="Name" class="form-control" [(ngModel)]="commentName">
