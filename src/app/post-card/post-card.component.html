@@ -1,0 +1,15 @@
+<div class="post-thumbnail"><img src={{inputpost?.featuredImage}} alt="..." class="img-fluid"></div>
+<div class="post-details">
+    <div class="post-meta d-flex justify-content-between">
+        <div class="date meta-last">{{inputpost?.postDate | date:'mediumDate'}}</div>
+        <div class="category"><a routerLink="#">{{inputpost?.category}}</a></div>
+    </div><a [routerLink]="['/post', inputpost?._id]">
+        <h3 class="h4">{{inputpost?.title}}</h3></a>
+    <div class="text-muted" innerHTML = {{inputpost?.post}}></div>
+    <footer class="post-footer d-flex align-items-center"><a routerLink="#" class="author d-flex align-items-center flex-wrap">
+        <div class="avatar"><img src="/assets/img/user.svg" alt="..." class="img-fluid"></div>
+        <div class="title"><span>{{inputpost?.postedBy}}</span></div></a>
+        <div class="date"><i class="icon-clock"></i>{{inputpost?.postDate | date:'mediumDate'}}</div>
+        <div class="comments meta-last"><i class="icon-comment"></i>{{inputpost?.comments?.length}}</div>
+    </footer>
+</div>
