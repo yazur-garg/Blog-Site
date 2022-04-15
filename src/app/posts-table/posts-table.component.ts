@@ -16,7 +16,7 @@ export class PostsTableComponent implements OnInit {
 
   ngOnInit(): void {
     this._postService.getAllPosts().subscribe(
-      data => {this.blogPosts = data;}
+      data => {this.blogPosts = data; console.log(this.blogPosts);}
     , err => {console.log('Error: ' + err)});
   }
 

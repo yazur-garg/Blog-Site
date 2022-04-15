@@ -7,7 +7,7 @@ import { BlogPost } from '../BlogPost';
   styleUrls: ['./post-card.component.css']
 })
 export class PostCardComponent implements OnInit {
-  @Input("post") inputpost : BlogPost | undefined;
+  @Input("post") inputpost : BlogPost;
   constructor() { }
 
   ngOnInit(): void {

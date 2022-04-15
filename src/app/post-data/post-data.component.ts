@@ -9,10 +9,10 @@ import { PostService } from '../post.service';
   styleUrls: ['./post-data.component.css']
 })
 export class PostDataComponent implements OnInit {
-  post : BlogPost | undefined;
+  post : BlogPost;
   querySub : any;
-  commentName:string|undefined;
-  commentText:string|undefined;
+  commentName:string;
+  commentText:string;
   constructor(private _postService: PostService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -26,12 +26,10 @@ export class PostDataComponent implements OnInit {
   submitComment(){
     var comment = {author: this.commentName,
     comment: this.commentText,
-    date: new Date().toLocaleDateString() };
-    this.post?.comments?.push(comment);
-    if (this.post != undefined)
-      this._postService.updatePostById(this.post._id,this.post).subscribe(
-        data => {this.commentName="";this.commentText="";}
-      , err => {console.log('Error: ' + err)});
+    date: new Date().toDateString() };
+    this.post.comments.push(comment);
+    this._postService.updatePostById(this.post._id,this.post).subscribe(
+      data => {this.commentName="";this.commentText="";});
   }
 
   ngOnDestroy(): void{

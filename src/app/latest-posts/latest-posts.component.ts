@@ -8,7 +8,7 @@ import { PostService } from '../post.service';
   styleUrls: ['./latest-posts.component.css']
 })
 export class LatestPostsComponent implements OnInit {
-  posts : Array<BlogPost> | undefined;
+  posts : Array<BlogPost>;
 
   constructor(private _postService: PostService) { }
 

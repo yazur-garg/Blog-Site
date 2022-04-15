@@ -6,7 +6,7 @@ import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./paging.component.css']
 })
 export class PagingComponent implements OnInit {
-  @Input("page") inputpage : number | undefined;
+  @Input("page") inputpage : number;
   @Output() newPage = new EventEmitter<number>();
   constructor() { }
 

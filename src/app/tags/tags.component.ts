@@ -7,7 +7,7 @@ import { PostService } from '../post.service';
   styleUrls: ['./tags.component.css']
 })
 export class TagsComponent implements OnInit {
-  tags: Array<string>|undefined;
+  tags: Array<string>;
   constructor(private _postService: PostService) { }
 
   ngOnInit(): void {

@@ -59,14 +59,14 @@ export class PostService {
   }
 
   newPost(data: BlogPost): Observable<any>{
-    return this.http.post<any>(this.url + `/api/posts`, data);
+    return this.http.post<any>(this.url + '/api/posts', data);
   }
 
   updatePostById(id: string|undefined, data: BlogPost): Observable<any>{
-    return this.http.put<any>(this.url + `/api/posts/${id}`, data);
+    return this.http.put<any>(this.url + '/api/posts/' + id, data);
   }
 
   deletePostById(id: string | undefined): Observable<any>{
-    return this.http.delete<any>(this.url + `/api/posts/${id}`);
+    return this.http.delete<any>(this.url + '/api/posts/' + id);
   }
 }

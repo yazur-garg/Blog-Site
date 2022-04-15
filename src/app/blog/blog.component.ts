@@ -10,7 +10,7 @@ import { BlogPost } from '../BlogPost';
 })
 export class BlogComponent implements OnInit {
   constructor(private _postService: PostService, private route: ActivatedRoute) { }
-  blogPosts: Array<BlogPost> | undefined;
+  blogPosts: Array<BlogPost>;
   page: number = 1;
   tag:string | null = null;
   category:string | null = null;

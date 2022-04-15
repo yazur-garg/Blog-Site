@@ -11,7 +11,7 @@ import { PostService } from '../post.service';
 export class NewPostComponent implements OnInit {
 
   blogPost: BlogPost = new BlogPost();
-  tags: string|undefined;
+  tags: string;
 
   constructor(private _postService: PostService, private route: Router) { }
 
@@ -20,14 +20,14 @@ export class NewPostComponent implements OnInit {
   }
 
   formSubmit() {
-    this.blogPost.tags = this.tags?.split(",").map(tag => tag.trim());
+    this.blogPost.tags = this.tags.split(",").map(tag => tag.trim());
     this.blogPost.isPrivate = false;
-    this.blogPost.postDate = new Date().toLocaleDateString();
+    this.blogPost.postDate = new Date().toDateString();
     this.blogPost.postedBy = "BTI425 Student";
     this.blogPost.views = 0;
+    console.log(this.blogPost);
     this._postService.newPost(this.blogPost).subscribe(
-      data => {this.route.navigate(['admin']);}
-    , err => {console.log('Error: ' + err)});
+      () => this.route.navigate(['admin']),
+      err => {console.log(err)});
  }
-
 }

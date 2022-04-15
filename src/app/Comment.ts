@@ -1,6 +1,6 @@
 export class Comment{
-    author: string | undefined;
-    comment: string | undefined;
-    date: string | undefined;
+    author: string;
+    comment: string;
+    date: string;
 }
    

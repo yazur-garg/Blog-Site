@@ -7,7 +7,7 @@ import { PostService } from '../post.service';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-  categories: Array<any> | undefined;
+  categories: Array<any>;
   constructor(private _postService: PostService) { }
 
   ngOnInit(): void{
