@@ -15,5 +15,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bti425-a3-yazurgarg';
+  title = 'Blog Site';
 }
