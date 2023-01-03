@@ -9,7 +9,8 @@ const perPage:number = 6;
   providedIn: 'root'
 })
 export class PostService {
-  private url = "https://bti425assignment4api.herokuapp.com"
+  //private url = "http://localhost:8080";
+  private url = "https://blog-api-0q91.onrender.com";
 
   constructor(private http:HttpClient) { }
 
