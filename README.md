@@ -1,6 +1,8 @@
-# Bti425A3Yazurgarg
+## [Click here to visit the site](https://blog-site-yazurgarg.netlify.app/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+# About
+
+This project was generated with [`Angular CLI`](https://github.com/angular/angular-cli) version 13.3.0. The frontend is biult using Bootstrap and in the backend an [`express.js application`](https://github.com/yazur-garg/Blog-API) is being used which communicates with a `mongodb database` which stores all the blog data.
 
 ## Development server
 
